@@ -31,18 +31,9 @@
 
 ## postsテーブル
 |Column|Type|Options|
-|------|---## postsテーブル
-|Column|Type|Options|
 |------|----|-------|
 |massage|text||
-|photo|text||references|null: false, foreign_key: true|
-|group_id|references|null: false, foreign_key: true|
-|user_id|references|null: false, foreign_key: true|
-### Association
-- belongs_to :user
-- belongs_to :group-|-------|
-|massage|text||
-|photo|text|
+|photo|text||
 |group_id|references|null: false, foreign_key: true|
 |user_id|references|null: false, foreign_key: true|
 ### Association
