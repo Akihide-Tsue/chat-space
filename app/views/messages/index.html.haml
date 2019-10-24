@@ -1,0 +1,46 @@
+%body
+  .flash-box
+    %p グループを作成しました
+
+  .chat-left
+    .chat-left-header
+      .chat-header__box
+      %p.chat-header__box__user-name ユーザー1
+      %ul.chat-header__box
+        = link_to 'new_group' do
+          %i.fa.fa-edit
+        = link_to 'edit_user' do
+          %i.fa.fa-cog
+
+    .groups
+      %p.group__name
+        グループ名1
+      %p.group__message
+        元気？
+      %p.group__name
+        グループ名2
+      %p.group__message
+        こんばんわ！
+
+  .chat-right
+    .chat-right-header
+      .left-box
+        .left-box__current-group グループ名1
+        .left-box__member-list Member：ユーザー名1 2
+      .__right-box
+        .__edit-btn Edit
+
+    .message__article
+      %p.message__article__sender 投稿ユーザー名
+      %p.message__article__date 2019/10/22(Tue) 14:13:13
+      %p.message__text こんにちは！
+      %p.message__article__sender 投稿ユーザー名2
+      %p.message__article__date 2019/10/22(Tue) 18:13:13
+      %p.message__text 元気？
+
+    .form
+      .form.new_message
+        .input-box.placeholder type a message
+        = link_to 'input_image_file' do
+          %i.fa.fa-image
+        .input submit

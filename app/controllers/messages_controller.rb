@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
-def index
-  @posts = Post.all
+ def index
+
+ end
 end
