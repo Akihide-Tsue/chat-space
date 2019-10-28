@@ -1,45 +1,56 @@
+.wrapper
 
-.flash-box
-  %p グループを作成しました
+  = render 'shared/side_bar'
 
-.chat-menu
-  .chat-menu-header
-    %p.chat-menu-header__box__user-name ユーザー1
-    %ul.chat-menu-header__box
-      = link_to 'new_group' do
-        %i.fa.fa-edit
-      = link_to 'edit_user' do
-        %i.fa.fa-cog
-  .groups
-    %p.group__name
-      グループA
-    %p.group__message
-      元気？
-    %p.group__name
-      グループB
-    %p.group__message
-      こんばんわ！
-
-.chat-main
-  .chat-main-header
-    .chat-main-header-box
-      .chat-main-header-box__current-group グループA
-      .chat-main-header-box__member-list Member：ユーザー名1 2
-    .edit-box
-      .edit-btn Edit
-  .message__article
-    .message__article__info
-      %p.message__article__sender 投稿ユーザー名
-      %p.message__article__date 2019/10/22(Tue) 14:13:13
-    %p.message__text こんにちは！
-    .message__article__info
-      %p.message__article__sender 投稿ユーザー名2
-      %p.message__article__date 2019/10/22(Tue) 18:13:13
-    %p.message__text 元気？
-
-.bottom
-  .bottom-form
-    %input.bottom-form__contents{name: "message[content]", placeholder: 'type a message'}
-      %i.fa.fa-image.bottom-form__contents--image
-        %a{href: "#"}
-  %input.bottom-submit{name: "commit", type: "submit", value: "send"}
+  .chat
+    .header
+      .left-header
+        .left-header__title
+          グループ名
+        %ul.left-header__members
+          Member：
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-header
+        .right-header__button
+          Edit
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+      .message
+        .upper-message
+          .upper-message__user-name
+            メンバー
+          .upper-message__date
+            2017/04/04
+        .lower-meesage
+          .lower-message__content
+            メッセージ
+    .form
+      %form
+        %input.form__message
+        .form__mask
+          %label.form__mask__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.hidden{type: 'file'}
+        %input.form__submit{type: 'submit', value: 'Send'}
