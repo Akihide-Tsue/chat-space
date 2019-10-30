@@ -31,17 +31,20 @@
       margin-top: 28px;
       padding: 0 20px;
       &__button {
-        color: $light_blue;
-        text-decoration: none;
+        a{
+          text-decoration: none;
+          color: $light_blue;
+        }
       }
     }
   }
 
   .messages {
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     box-sizing: border-box;
-    padding: 146px 40px 0;
-    height: calc(100% - 100px - 90px);
+    padding: 46px 40px 0;
+    height: calc(100vh - 190px);
+
     .message {
       .upper-message {
         display: flex;
