@@ -1,6 +1,6 @@
 .wrapper
-
   = render 'shared/side_bar'
+
 
   .chat
     .header
@@ -9,11 +9,9 @@
           = @group.name
         %ul.left-header__members
           Member：
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
-
+          - @group.users.each do |user|
+            %li.member
+              = user.name
       .right-header
         .right-header__button
           = link_to edit_group_path(@group) do
