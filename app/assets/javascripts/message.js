@@ -30,7 +30,6 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages){
-      console.log(messages)
       var html = buildMessage(messages);//追加するHTMLの入れ物
         messages.forEach(function (messages) {//配列messagesの中身をHTMLに変換し→入れ物に
         html = buildMessage(messages); //メッセージが入ったHTMLを取得
@@ -51,7 +50,6 @@ $(function(){
     e.preventDefault()
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    console.log("OK")
     $.ajax({
       url: url,  //同期通信でいう『パス』
       type: "POST",  //同期通信でいう『HTTPメソッド』
