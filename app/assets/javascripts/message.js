@@ -34,8 +34,8 @@ $(function(){
         messages.forEach(function (messages) {//配列messagesの中身をHTMLに変換し→入れ物に
         html = buildMessage(messages); //メッセージが入ったHTMLを取得
         $('.messages').append(html);//append
-      })
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        })
       $('.form__submit').prop('disabled', false);
       $('form')[0].reset();
     })
