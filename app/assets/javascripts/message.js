@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function() {
 $(function(){
   function buildMessage(message){
   var image = message.image? `<img class= "lower-message__image" src=${message.image} >` : "";
@@ -37,7 +38,6 @@ $(function(){
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         })
       $('.form__submit').prop('disabled', false);
-      $('form')[0].reset();
     })
     .fail(function() {
       alert('自動更新に失敗しました');
@@ -70,3 +70,4 @@ $(function(){
     })
   })
 })
+});
